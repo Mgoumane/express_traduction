@@ -1,0 +1,20 @@
+## Instructions
+
+Réaliser une page avec 3 liens : `fr` pour le français, `en` pour l’anglais et `es` pour l’espagnol.
+
+Chaque page affichera le texte `Bonjour, ça va ?` dans la langue du pays.
+
+## Code
+
+Dans le fichier `index.js` :
+
+- Importer `express` et instancier le dans une variable appelée `app`
+- Importer `express-handlebars` dans une variable `exphbs`
+- Configurer handlebars avec express
+- Créer la route `/:lang?` (le point d’interrogation permet à la route de fonctionner avec ou sans le paramètre. Ex: `/` ou `/fr` fonctionneront) qui va `render` le template `home`
+- Utiliser le paramètre `lang` pour savoir quelle clé de traduction sera utilisé. Penser à définir `fr` comme valeur par défaut au cas où la valeur de `lang` serait `undefined` ou ne serait pas présente dans le dictionnaire de données
+- Afficher:
+    - la clé `pageTitle` dans la balise `<title>` de la page
+    - la clé `pageTitle` dans la balise `<h1>`
+    - la clé `title` dans le `<h2>` du body dans le body
+- Afficher l’image correspondante au pays en passant la valeur de la variable `lang` dans le template Handlebars
